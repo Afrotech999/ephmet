@@ -1,0 +1,273 @@
+"use client";
+
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import {
+  Award,
+  Target,
+  Globe2,
+  Factory,
+  ShieldCheck,
+  Layers,
+} from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+export default function About() {
+  return (
+    <div className="min-h-screen bg-[#F4F5F7]">
+      <Header />
+
+      {/* Hero Section */}
+      <section
+        className="relative py-20 sm:py-28 border-b overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, #f8f9fa 0%, #e5e7eb 50%, #f3f4f6 100%)",
+        }}
+      >
+        {/* Abstract moving steel lines */}
+        <motion.div
+          className="absolute inset-0"
+          initial={{ x: -500 }}
+          animate={{ x: 500 }}
+          transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+        >
+          <div className="absolute h-[2px] w-96 bg-gray-300/40 top-1/4 rotate-6" />
+          <div className="absolute h-[2px] w-72 bg-gray-400/40 top-1/2 rotate-12" />
+          <div className="absolute h-[2px] w-80 bg-gray-500/30 top-3/4 rotate-3" />
+        </motion.div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1
+            className="text-3xl sm:text-6xl font-extrabold text-[#333] tracking-tight mb-6"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Precision. Strength. Reliability.
+          </motion.h1>
+          <motion.p
+            className="text-base sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            As a forward-thinking steel import and export company, we provide
+            world-class steel solutions engineered to support Africa’s
+            fast-growing industrial, commercial, and infrastructure development.
+            With a commitment to innovation, quality, and global standards—our
+            mission is to build the future with strength.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Company Overview */}
+      <section className="py-20 sm:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl font-bold text-[#333] mb-6">Who We Are</h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              With decades of industrial expertise, we are one of Djibouti’s
+              most trusted suppliers of high-grade steel products. Leveraging
+              strategic import partnerships and advanced facilities, we support
+              construction, manufacturing, and large-scale infrastructure
+              development.
+            </p>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Our portfolio spans structural steel, rebars, sheets, coils,
+              pipes, and custom steel profiles sourced from world-certified
+              mills. We deliver reliability and excellence to contractors,
+              manufacturers, distributors, and government projects across the
+              region.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="h-[300px] rounded-xl border shadow bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1zlGDl-mkAf0tmvM5jTc4-EPgvVrExPFoLQbgZM7JpFvSAkJNmjNcbjPxvXs73YIm8yqhTj3b')",
+            }}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          />
+        </div>
+      </section>
+
+      {/* Stats
+      <section className="py-16 sm:py-20 bg-[#ECEEEF] border-y">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10 text-center">
+          {[
+            { label: "Years of Industry Experience", value: "15+" },
+            { label: "Tonnes Delivered Annually", value: "120,000+" },
+            { label: "Global Supply Partners", value: "20+" },
+            { label: "Major Projects Served", value: "500+" },
+          ].map((item, idx) => (
+            <motion.div
+              key={item.label}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.2 }}
+            >
+              <h3 className="text-4xl font-bold text-[#333]">{item.value}</h3>
+              <p className="text-gray-600 mt-2 text-sm">{item.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section> */}
+
+      {/* Mission & Vision */}
+      <section className="py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
+          {[
+            {
+              icon: <Target className="text-blue-600 mb-4" size={36} />,
+              title: "Our Mission",
+              desc: "To deliver world-class steel products with unmatched precision, competitive value, and global-standard quality—empowering industries, construction companies, and national infrastructure projects across Djibouti and the Horn of Africa.",
+            },
+            {
+              icon: <Award className="text-blue-600 mb-4" size={36} />,
+              title: "Our Vision",
+              desc: "To be Africa’s most trusted steel supplier and industrial partner, recognized for operational excellence, reliability, and innovation—delivering the strength that builds nations.",
+            },
+          ].map((item, idx) => (
+            <motion.div
+              key={item.title}
+              className="p-10 bg-white rounded-xl border shadow-sm"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.2 }}
+            >
+              {item.icon}
+              <h3 className="text-xl font-bold text-[#333] mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-600  leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Strengths */}
+      <section className="py-20 sm:py-24 bg-[#F4F5F7] border-y">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-center text-[#333] mb-14">
+            Why Clients Trust Us
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <ShieldCheck className="text-blue-700" size={32} />,
+                title: "Global Standard Quality",
+                desc: "We source from certified mills with stringent QA processes.",
+              },
+              {
+                icon: <Factory className="text-blue-700" size={32} />,
+                title: "Reliable Supply Chain",
+                desc: "Strong international partnerships ensure uninterrupted supply.",
+              },
+              {
+                icon: <Layers className="text-blue-700" size={32} />,
+                title: "Wide Product Portfolio",
+                desc: "From structural steel to specialty alloys—we cover all needs.",
+              },
+              {
+                icon: <Globe2 className="text-blue-700" size={32} />,
+                title: "International Reach",
+                desc: "We work with world-leading manufacturers across multiple countries.",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={item.title}
+                className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.2 }}
+              >
+                <div className="mb-4">{item.icon}</div>
+                <h3 className="font-bold text-lg text-[#333] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Journey Timeline */}
+      <section className="py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#333] mb-12 text-center">
+            Our Journey
+          </h2>
+          <div className="space-y-10">
+            {[
+              {
+                year: "2010",
+                event: "Company Established",
+                desc: "Launched with the mission to elevate the steel supply industry.",
+              },
+              {
+                year: "2016",
+                event: "Global Expansion",
+                desc: "Formed strategic partnerships with international steel mills.",
+              },
+              {
+                year: "2021",
+                event: "Quality Certifications",
+                desc: "Achieved multiple international quality and safety certifications.",
+              },
+              {
+                year: "2024",
+                event: "Regional Market Leadership",
+                desc: "Recognized as one of the region’s most trusted steel suppliers.",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="flex gap-6"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.2 }}
+              >
+                <div className="text-center">
+                  <div className="w-4 h-4 bg-blue-600 rounded-full mx-auto mb-4" />
+                  <div className="text-blue-700 font-bold">{item.year}</div>
+                </div>
+                <div className="p-6 bg-white border rounded-xl shadow-sm flex-1">
+                  <h3 className="font-bold text-[#333] mb-1">{item.event}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
