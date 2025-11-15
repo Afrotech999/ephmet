@@ -77,36 +77,32 @@ export default function Contact() {
       <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Contact Info Cards */}
+            {/* Phone */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
               <Phone size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Phone</h3>
-              <p className="text-gray-600 text-sm mb-2">
-                +251 (0) XXX XXX XXXX
-              </p>
+              <p className="text-gray-600 text-sm mb-2">+253 7750 6510</p>
               <p className="text-gray-600 text-sm">
                 Available during business hours
               </p>
             </div>
 
+            {/* Email */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
               <Mail size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Email</h3>
-              <p className="text-gray-600 text-sm mb-2">info@steelco.et</p>
+              <p className="text-gray-600 text-sm mb-2">Ephmetdji@gmail.com</p>
               <p className="text-gray-600 text-sm">
                 We'll respond within 24 hours
               </p>
             </div>
 
+            {/* Location */}
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
               <MapPin size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Location</h3>
-              <p className="text-gray-600 text-sm mb-2">
-                Addis Ababa, Ethiopia
-              </p>
-              <p className="text-gray-600 text-sm">
-                Main Office & Manufacturing
-              </p>
+              <p className="text-gray-600 text-sm mb-2">Djibouti, Red Sea FZ</p>
+              <p className="text-gray-600 text-sm">Main Office</p>
             </div>
           </div>
 
@@ -141,7 +137,7 @@ export default function Contact() {
                           : field === "email"
                           ? "your@email.com"
                           : field === "phone"
-                          ? "+251 (0) XXXXXXXXX"
+                          ? "+253 7750 6510"
                           : "Your Company"
                       }
                     />
