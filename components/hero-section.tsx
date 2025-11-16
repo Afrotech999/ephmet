@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Static Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://i.pinimg.com/1200x/18/8f/c5/188fc5b6c3f2dd670cd14bde242eb174.jpg"
+          src="https://i.pinimg.com/1200x/9f/d6/0e/9fd60e5821db23d8b5ffbb3b9eeb9b71.jpg"
           alt="Steel background"
           fill
           style={{ objectFit: "cover" }}
