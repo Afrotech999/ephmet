@@ -66,11 +66,8 @@ export function HeroSection() {
           {/* Subtitle */}
           <p className="text-base sm:text-xl text-gray-200 max-w-2xl mx-auto">
             Premier steel import & export solutions proudly operating from
-            <span className="font-semibold text-white">
-              {" "}
-              Djibouti, Red Sea Free Zone
-            </span>
-            , supplying high-grade industrial materials across the region.
+            <span className="font-semibold text-white"> Djibouti</span>,
+            supplying high-grade industrial materials across the region.
           </p>
 
           {/* Buttons (static size, no animation) */}

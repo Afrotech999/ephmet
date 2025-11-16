@@ -7,54 +7,92 @@ import { Footer } from "@/components/footer";
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
+  // Projects with additional details
   const projects = [
+    {
+      id: 0,
+      title: "Steel Structure Project",
+      category: "industrial",
+      image:
+        "https://i.pinimg.com/736x/0e/d2/38/0ed238b406e22faa05ca7fc47235aeb7.jpg",
+      details: [
+        "Fabrication of heavy steel beams and columns",
+        "Welding, cutting, and high-precision assembly",
+        "On-site steel erection using cranes",
+        "Corrosion protection and industrial coating",
+      ],
+      description:
+        "A complete steel structure project featuring heavy fabrication, precise assembly, and structural finishing designed for long-term industrial use.",
+    },
     {
       id: 1,
       title: "Highway Bridge Construction",
       category: "infrastructure",
-      image: "/placeholder.svg?key=hwayb",
+      image:
+        "https://i.pinimg.com/736x/0c/fa/52/0cfa522d193bb2fcfd6e5fe400970e77.jpg",
+      details: [
+        "Steel truss and girder fabrication",
+        "Load-bearing structural design",
+        "Bridge deck reinforcement",
+      ],
       description:
-        "Large-scale structural steel project for highway bridge construction in Addis Ababa.",
+        "Large-scale steel bridge project incorporating reinforced truss assemblies and advanced engineering for heavy traffic operations.",
     },
     {
       id: 2,
       title: "Commercial Building Complex",
       category: "commercial",
-      image: "/placeholder.svg?key=cmmrc",
+      image:
+        "https://i.pinimg.com/1200x/ea/85/a4/ea85a4e479990e0a714cca0f4564e325.jpg",
+      details: [
+        "Multi-story steel framing",
+        "Core and shell structure development",
+        "Fire-resistant steel treatment",
+      ],
       description:
-        "Multi-story commercial building with extensive structural steel framework.",
+        "A modern commercial complex with multi-level steel frameworks engineered for durability, safety, and architectural flexibility.",
     },
     {
       id: 3,
       title: "Industrial Warehouse Facility",
       category: "industrial",
-      image: "/placeholder.svg?key=indst",
+      image:
+        "https://i.pinimg.com/1200x/48/11/7f/48117f1f89f05d0acc8e848cb0065067.jpg",
+      details: [
+        "Heavy-load roof trusses",
+        "Wide-span open steel framing",
+        "Custom fabrication for machinery access",
+      ],
       description:
-        "Heavy-duty structural steel warehouse with custom metal fabrication.",
+        "High-capacity steel warehouse designed for industrial operations, integrating structural efficiency and customized build features.",
     },
     {
       id: 4,
       title: "Water Treatment Plant",
       category: "infrastructure",
-      image: "/placeholder.svg?key=wattr",
+      image:
+        "https://i.pinimg.com/1200x/48/be/0b/48be0b71481b166794fb5192da2c4f8e.jpg",
+      details: [
+        "Reinforced steel tanks and support structures",
+        "Corrosion-resistant steel coating",
+        "Structural support for high-pressure systems",
+      ],
       description:
-        "Reinforced steel structures for water treatment and storage facility.",
+        "A highly engineered steel build for water treatment operations supporting fluid processing, filtration, and storage functions.",
     },
     {
       id: 5,
       title: "Shopping Mall Development",
       category: "commercial",
-      image: "/placeholder.svg?key=shpml",
+      image:
+        "https://i.pinimg.com/1200x/20/48/0f/20480ff3c226420e81854d7b38e47238.jpg",
+      details: [
+        "Steel-supported atrium and open spaces",
+        "Multi-level beam and column system",
+        "Architectural steel detailing",
+      ],
       description:
-        "Multi-level shopping complex featuring advanced steel construction.",
-    },
-    {
-      id: 6,
-      title: "Manufacturing Plant Expansion",
-      category: "industrial",
-      image: "/placeholder.svg?key=mnfct",
-      description:
-        "Industrial manufacturing facility with state-of-the-art steel framework.",
+        "A multi-level shopping mall built with modern structural steel components providing open interior spaces and refined architectural finishes.",
     },
   ];
 
@@ -115,12 +153,12 @@ export default function Projects() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all"
+                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all"
               >
-                {/* Project Image */}
+                {/* Image */}
                 <div className="relative overflow-hidden h-48 bg-gray-100">
                   <div
-                    className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full"
                     style={{
                       backgroundImage: `url(${project.image})`,
                       backgroundSize: "cover",
@@ -129,9 +167,9 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Project Info */}
+                {/* Info */}
                 <div className="p-5">
-                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-medium rounded mb-2">
+                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-medium rounded mb-3">
                     {categories.find((c) => c.id === project.category)?.label}
                   </span>
 
@@ -143,9 +181,11 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  <button className="w-full px-4 py-2 bg-[#333] text-white rounded text-sm font-medium hover:bg-[#555] transition-colors">
-                    View Details
-                  </button>
+                  <ul className="text-gray-700 text-sm list-disc pl-4 space-y-1">
+                    {project.details.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -159,7 +199,7 @@ export default function Projects() {
           <h2 className="text-2xl sm:text-4xl font-bold text-[#333] mb-6">
             Ready for Your Project?
           </h2>
-          <p className="text-bse text-gray-600 mb-8">
+          <p className="text-base text-gray-600 mb-8">
             Let us help you bring your construction or industrial project to
             life with our premium steel solutions.
           </p>

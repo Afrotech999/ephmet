@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Boxes } from "lucide-react";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -143,13 +144,13 @@ export default function ProductsCenter() {
           transition={{ delay: 0.4 }}
           className="text-center mt-16"
         >
-          <a
+          <Link
             href="/products"
             className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition-all"
           >
             <Boxes className="w-5 h-5" />
             View All Products
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
