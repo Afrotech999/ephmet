@@ -125,7 +125,7 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white border border-gray-200 rounded-none shadow-sm hover:shadow-lg transition-all overflow-hidden"
+                className="bg-white border border-gray-200 rounded-none shadow-md hover:shadow-2xl transition-all overflow-hidden"
               >
                 {/* IMAGE */}
                 <div className="relative h-56 overflow-hidden">
