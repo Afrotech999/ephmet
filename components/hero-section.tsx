@@ -1,53 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiChevronDown } from "react-icons/fi";
 
-const steelImages = [
-  "/images/steel-roll.webp",
-  "/images/rebar.webp",
-  "/images/structural-steel.webp",
-];
-
 export function HeroSection() {
-  const [currentBg, setCurrentBg] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % steelImages.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden font-sans">
-      {/* Background Carousel */}
+      {/* Static Background */}
       <div className="absolute inset-0 z-0">
-        {steelImages.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentBg ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={img}
-              alt={`Steel background ${index + 1}`}
-              fill
-              style={{ objectFit: "cover" }}
-              priority={index === 0}
-            />
-            <div className="absolute inset-0 bg-black/60" />
-          </div>
-        ))}
+        <Image
+          src="https://i.pinimg.com/1200x/18/8f/c5/188fc5b6c3f2dd670cd14bde242eb174.jpg"
+          alt="Steel background"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-6">
-          {/* Static Main Title (2 lines) */}
           <h1 className="font-extrabold text-white leading-tight tracking-tight">
             <span className="block leading-tight">
               <span className="block text-3xl sm:text-5xl lg:text-6xl">
@@ -57,20 +31,17 @@ export function HeroSection() {
                 RED SEA FZCO
               </span>
             </span>
-
             <span className="block text-1xl sm:text-6xl lg:text-4xl mt-1">
               INDUSTRIAL MATERIALS
             </span>
           </h1>
 
-          {/* Subtitle */}
           <p className="text-base sm:text-xl text-gray-200 max-w-2xl mx-auto">
             Premier steel import & export solutions proudly operating from
             <span className="font-semibold text-white"> Djibouti</span>,
             supplying high-grade industrial materials across the region.
           </p>
 
-          {/* Buttons (static size, no animation) */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link
               href="/contact"
