@@ -125,7 +125,7 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden"
+                className="bg-white border border-gray-200 rounded-none shadow-sm hover:shadow-lg transition-all overflow-hidden"
               >
                 {/* IMAGE */}
                 <div className="relative h-56 overflow-hidden">
@@ -143,7 +143,7 @@ export default function Projects() {
 
                 {/* CONTENT */}
                 <div className="p-7">
-                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-semibold rounded mb-4">
+                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-semibold rounded-none mb-4">
                     {categories.find((c) => c.id === project.category)?.label}
                   </span>
 
