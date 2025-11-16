@@ -101,7 +101,7 @@ export default function Contact() {
             <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
               <MapPin size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Location</h3>
-              <p className="text-gray-600 text-sm mb-2">Djibouti, Red Sea FZ</p>
+              <p className="text-gray-600 text-sm mb-2">Djibouti</p>
               <p className="text-gray-600 text-sm">Main Office</p>
             </div>
           </div>

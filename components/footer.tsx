@@ -25,8 +25,8 @@ export function Footer() {
             </div>
             <p className="text-gray-400 text-sm">
               Premier steel import & export solutions proudly operating from
-              Djibouti, Red Sea Free Zone, supplying high-grade industrial
-              materials across the region.
+              Djibouti, supplying high-grade industrial materials across the
+              region.
             </p>
           </div>
 
@@ -58,9 +58,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent mt-1 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
-                  Djibouti, Red Sea FZ
-                </span>
+                <span className="text-gray-400 text-sm">Djibouti</span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="text-accent mt-1 flex-shrink-0" />
