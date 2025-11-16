@@ -174,7 +174,7 @@ export default function Products() {
 
       {/* HERO */}
       <section className="relative py-16 sm:py-24 bg-gradient-to-b from-zinc-100 to-zinc-200 border-b border-zinc-300">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 flex gap-3 overflow-x-auto no-scrollbar">
           <h1 className="text-2xl sm:text-5xl font-bold text-zinc-800 mb-6">
             Products & Services
           </h1>

@@ -181,3 +181,22 @@
     border: 1px solid oklch(0.25 0 0);
   }
 }
+
+/* MOBILE NO-SCROLLBAR UTILITY   */
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar for IE/Edge */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+  }
+}
