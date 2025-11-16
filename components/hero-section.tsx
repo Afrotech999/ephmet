@@ -74,13 +74,13 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link
               href="/contact"
-              className="px-8 py-3 bg-blue-700 text-white font-bold rounded hover:bg-blue-800 transition-colors hover:shadow-lg"
+              className="px-8 py-3 bg-blue-700 text-white font-bold rounded-2xl hover:bg-blue-800 transition-colors hover:shadow-lg"
             >
               Request Quote
             </Link>
             <Link
               href="/products"
-              className="px-8 py-3 border-2 border-gray-300 text-white font-bold rounded hover:bg-white/10 transition-colors"
+              className="px-8 py-3 border-2 border-gray-300 text-white font-bold rounded-2xl hover:bg-white/10 transition-colors"
             >
               Explore Products
             </Link>

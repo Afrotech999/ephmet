@@ -42,12 +42,12 @@ export function FeaturesSection() {
             return (
               <div
                 key={feature.title}
-                className="p-8 bg-gray-100 border border-gray-200 rounded-xl shadow-sm 
+                className="p-8 bg-gray-100 border border-gray-200 shadow-sm 
                 hover:shadow-md transition-transform transform hover:-translate-y-1 
                 group text-center"
               >
                 <div
-                  className="w-16 h-16 mx-auto bg-gray-200 rounded-full 
+                  className="w-16 h-16 mx-auto bg-gray-200 
                   flex items-center justify-center mb-6 transition-all group-hover:scale-110"
                 >
                   <Icon size={24} className="text-blue-600" />

@@ -102,7 +102,7 @@ export default function Projects() {
               onClick={() => setSelectedCategory(cat.id)}
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
-              className={`px-7 py-2.5 rounded font-semibold transition-all text-base ${
+              className={`px-7 py-2.5 rounded-xl font-semibold transition-all text-base ${
                 selectedCategory === cat.id
                   ? "bg-[#333] text-white shadow"
                   : "bg-white border text-[#333] hover:border-[#555]"
@@ -125,7 +125,7 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white border border-gray-200 rounded-none shadow-md hover:shadow-2xl transition-all overflow-hidden"
+                className="bg-white border border-gray-200 rounded-none shadow-lg hover:shadow-[0_10px_35px_rgba(0,0,0,0.25)] transition-all overflow-hidden"
               >
                 {/* IMAGE */}
                 <div className="relative h-56 overflow-hidden">

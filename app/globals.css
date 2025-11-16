@@ -67,6 +67,14 @@
   --radius-lg: var(--radius);
 }
 
+@font-face {
+  font-family: "AquireLight";
+  src: url("/fonts/AquireLight-YzE0o.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ----------------------------- */
 /* BASE STYLES                   */
 /* ----------------------------- */

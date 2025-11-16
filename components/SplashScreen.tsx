@@ -19,8 +19,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     <div
       className="fixed inset-0 flex flex-col items-center justify-center z-50"
       style={{
-        background:
-          "linear-gradient(135deg, #00A3DD, #FFFFFF, #007847, #FF0000)",
+        background: "linear-gradient(135deg, #0a192f, #1e3a5f)", // soft blue-black gradient
       }}
     >
       {/* Logo */}
@@ -32,7 +31,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
       {/* Company Name */}
       <h1 className="text-3xl font-bold text-white mb-6">EPHMET</h1>
       {/* Loading Spinner */}
-      <div className="w-12 h-12 border-4 border-white border-t-blue-900 rounded-full animate-spin"></div>
+      <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
     </div>
   );
 }
