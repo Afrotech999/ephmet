@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  // Projects with additional details
   const projects = [
     {
       id: 0,
@@ -16,13 +16,14 @@ export default function Projects() {
       image:
         "https://i.pinimg.com/736x/0e/d2/38/0ed238b406e22faa05ca7fc47235aeb7.jpg",
       details: [
-        "Fabrication of heavy steel beams and columns",
-        "Welding, cutting, and high-precision assembly",
-        "On-site steel erection using cranes",
-        "Corrosion protection and industrial coating",
+        "Fabrication of heavy steel beams and load-bearing columns",
+        "High-precision welding, plasma cutting, and assembly",
+        "On-site steel erection using hydraulic cranes",
+        "Industrial-grade corrosion-resistant coating",
+        "ISO-certified quality inspection & load testing",
       ],
       description:
-        "A complete steel structure project featuring heavy fabrication, precise assembly, and structural finishing designed for long-term industrial use.",
+        "A complete structural steel solution for a multi-purpose industrial facility. The project included precision fabrication, structural integration, and durability engineering for long-term operation.",
     },
     {
       id: 1,
@@ -31,26 +32,13 @@ export default function Projects() {
       image:
         "https://i.pinimg.com/736x/0c/fa/52/0cfa522d193bb2fcfd6e5fe400970e77.jpg",
       details: [
-        "Steel truss and girder fabrication",
-        "Load-bearing structural design",
-        "Bridge deck reinforcement",
+        "Steel truss and bridge girder fabrication",
+        "Advanced load-bearing design for high-capacity roads",
+        "Bridge deck reinforcement and concrete integration",
+        "On-site anti-corrosion treatment & weather sealing",
       ],
       description:
-        "Large-scale steel bridge project incorporating reinforced truss assemblies and advanced engineering for heavy traffic operations.",
-    },
-    {
-      id: 2,
-      title: "Commercial Building Complex",
-      category: "commercial",
-      image:
-        "https://i.pinimg.com/1200x/ea/85/a4/ea85a4e479990e0a714cca0f4564e325.jpg",
-      details: [
-        "Multi-story steel framing",
-        "Core and shell structure development",
-        "Fire-resistant steel treatment",
-      ],
-      description:
-        "A modern commercial complex with multi-level steel frameworks engineered for durability, safety, and architectural flexibility.",
+        "A major national-road project featuring heavy steel truss systems, engineered for stability, load distribution, and long-term resilience under extreme traffic conditions.",
     },
     {
       id: 3,
@@ -59,40 +47,13 @@ export default function Projects() {
       image:
         "https://i.pinimg.com/1200x/48/11/7f/48117f1f89f05d0acc8e848cb0065067.jpg",
       details: [
-        "Heavy-load roof trusses",
-        "Wide-span open steel framing",
-        "Custom fabrication for machinery access",
+        "Wide-span steel framing for open-floor operations",
+        "Heavy-load roof trusses and reinforced joints",
+        "Customized fabrication accommodating machinery movement",
+        "Fire-resistant coating and industrial-grade finishing",
       ],
       description:
-        "High-capacity steel warehouse designed for industrial operations, integrating structural efficiency and customized build features.",
-    },
-    {
-      id: 4,
-      title: "Water Treatment Plant",
-      category: "infrastructure",
-      image:
-        "https://i.pinimg.com/1200x/48/be/0b/48be0b71481b166794fb5192da2c4f8e.jpg",
-      details: [
-        "Reinforced steel tanks and support structures",
-        "Corrosion-resistant steel coating",
-        "Structural support for high-pressure systems",
-      ],
-      description:
-        "A highly engineered steel build for water treatment operations supporting fluid processing, filtration, and storage functions.",
-    },
-    {
-      id: 5,
-      title: "Shopping Mall Development",
-      category: "commercial",
-      image:
-        "https://i.pinimg.com/1200x/20/48/0f/20480ff3c226420e81854d7b38e47238.jpg",
-      details: [
-        "Steel-supported atrium and open spaces",
-        "Multi-level beam and column system",
-        "Architectural steel detailing",
-      ],
-      description:
-        "A multi-level shopping mall built with modern structural steel components providing open interior spaces and refined architectural finishes.",
+        "A high-capacity warehouse facility built with precision steel engineering, optimized for manufacturing, logistics, and long-term heavy-duty operations.",
     },
   ];
 
@@ -112,52 +73,65 @@ export default function Projects() {
     <div className="min-h-screen bg-[#F4F5F7]">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#ECEEEF] border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-5xl font-bold text-[#333] mb-6">
+      {/* HERO */}
+      <motion.section
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-16 sm:py-24 bg-[#ECEEEF] border-b"
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-5xl font-bold text-[#333] mb-6">
             Projects Portfolio
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            Showcasing our expertise through completed projects across
-            infrastructure, commercial, and industrial sectors.
+
+          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+            A selection of our completed steel, infrastructure, and industrial
+            engineering projects — delivered with precision, durability, and
+            world-class standards.
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Filter Buttons */}
+      {/* FILTER BUTTONS */}
       <section className="py-12 bg-[#ECEEEF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`px-6 py-2 rounded font-medium transition-all ${
-                  selectedCategory === cat.id
-                    ? "bg-[#333] text-white shadow"
-                    : "bg-white border text-[#333] hover:border-[#555]"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 flex flex-wrap gap-3 justify-center">
+          {categories.map((cat) => (
+            <motion.button
+              key={cat.id}
+              onClick={() => setSelectedCategory(cat.id)}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              className={`px-7 py-2.5 rounded font-semibold transition-all text-base ${
+                selectedCategory === cat.id
+                  ? "bg-[#333] text-white shadow"
+                  : "bg-white border text-[#333] hover:border-[#555]"
+              }`}
+            >
+              {cat.label}
+            </motion.button>
+          ))}
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div
+      {/* PROJECTS GRID */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {filteredProjects.map((project, index) => (
+              <motion.div
                 key={project.id}
-                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.03 }}
+                className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden"
               >
-                {/* Image */}
-                <div className="relative overflow-hidden h-48 bg-gray-100">
-                  <div
+                {/* IMAGE */}
+                <div className="relative h-56 overflow-hidden">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
                     className="w-full h-full"
                     style={{
                       backgroundImage: `url(${project.image})`,
@@ -167,50 +141,58 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Info */}
-                <div className="p-5">
-                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-medium rounded mb-3">
+                {/* CONTENT */}
+                <div className="p-7">
+                  <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-xs font-semibold rounded mb-4">
                     {categories.find((c) => c.id === project.category)?.label}
                   </span>
 
-                  <h3 className="text-lg font-bold text-[#333] mb-2">
+                  <h3 className="text-xl font-bold text-[#333] mb-3">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-700 text-base mb-5 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <ul className="text-gray-700 text-sm list-disc pl-4 space-y-1">
-                    {project.details.map((item, index) => (
-                      <li key={index}>{item}</li>
+                  <ul className="text-gray-700 text-base list-disc pl-5 space-y-1">
+                    {project.details.map((item, i) => (
+                      <li key={i}>{item}</li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-24 bg-[#ECEEEF] border-t">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-4xl font-bold text-[#333] mb-6">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 bg-[#ECEEEF] border-t"
+      >
+        <div className="max-w-3xl mx-auto px-6 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#333] mb-6">
             Ready for Your Project?
           </h2>
-          <p className="text-base text-gray-600 mb-8">
-            Let us help you bring your construction or industrial project to
-            life with our premium steel solutions.
+
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            Partner with us to bring your construction, infrastructure, or
+            industrial project to life using world-class steel solutions and
+            expert engineering.
           </p>
+
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-[#333] text-white font-bold rounded hover:bg-[#555] transition-colors"
+            className="inline-block px-10 py-4 bg-[#333] text-white text-lg font-bold rounded-lg hover:bg-[#555] transition-colors"
           >
             Start Your Project
           </a>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
