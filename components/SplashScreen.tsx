@@ -28,8 +28,15 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
         alt="EPHMET Logo"
         className="w-24 h-24 mb-6 animate-pulse"
       />
-      {/* Company Name */}
-      <h1 className="text-3xl font-bold text-white mb-6">EPHMET</h1>
+
+      {/* Company Name with same font as header */}
+      <h1
+        className="text-3xl font-bold text-white mb-6"
+        style={{ fontFamily: "AquireLight, sans-serif", fontWeight: 400 }}
+      >
+        EPHMET
+      </h1>
+
       {/* Loading Spinner */}
       <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
     </div>
