@@ -6,8 +6,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Products() {
-  const steelColor = "text-[#6E7C87]"; // Steel-like color
-
   const categories = [
     "All",
     "Flat Products",
@@ -154,18 +152,14 @@ export default function Products() {
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // -----------------------------
-  // FILTERED DATA
-  // -----------------------------
   const flat = products.filter((p) => p.category === "Flat Products");
   const long = products.filter((p) => p.category === "Long Products");
   const bitumen = products.filter((p) => p.category === "Bitumen");
   const sinotruck = products.filter((p) => p.category === "Sinotruck");
 
-  // When filter applied → use normal filtered grid
   const filteredProducts =
     selectedCategory === "All"
-      ? [] // empty array instead of null
+      ? []
       : products.filter((p) => p.category === selectedCategory);
 
   return (
@@ -209,35 +203,33 @@ export default function Products() {
       {/* GRID SECTION */}
       <section className="py-16 bg-[#f7f7f7]">
         <div className="max-w-7xl mx-auto px-4">
-          {/* If filtered category selected → normal grid */}
           {selectedCategory !== "All" ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            // FILTERED VIEW
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.name} product={product} />
               ))}
             </div>
           ) : (
             <>
-              {/* ------------------ FLAT + LONG (side by side) ------------------ */}
-              <div className="grid grid-cols-2 md:grid-cols-2 gap-10">
-                {/* LEFT = FLAT PRODUCTS */}
+              {/* FLAT + LONG SIDE BY SIDE */}
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                 <div>
                   <h2 className="text-xl font-bold mb-6 text-zinc-700">
                     Flat Products
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {flat.map((product) => (
                       <ProductCard key={product.name} product={product} />
                     ))}
                   </div>
                 </div>
 
-                {/* RIGHT = LONG PRODUCTS */}
                 <div>
                   <h2 className="text-xl font-bold mb-6 text-zinc-700">
                     Long Products
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {long.map((product) => (
                       <ProductCard key={product.name} product={product} />
                     ))}
@@ -245,12 +237,12 @@ export default function Products() {
                 </div>
               </div>
 
-              {/* ------------------ BITUMEN + SINOTRUCK BELOW ------------------ */}
+              {/* OTHER PRODUCTS */}
               <h2 className="text-xl font-bold mt-16 mb-6 text-zinc-700">
                 Other Products
               </h2>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                 {bitumen.map((product) => (
                   <ProductCard key={product.name} product={product} />
                 ))}
@@ -271,12 +263,12 @@ export default function Products() {
 function ProductCard({ product }: any) {
   return (
     <div
-      className="group bg-white border border-zinc-300 rounded-lg shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col 
-  min-h-[270px] sm:min-h-[300px]"
+      className="group bg-white border border-zinc-300 rounded-t-lg rounded-b-none shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col 
+      min-h-[270px] sm:min-h-[300px]"
     >
       {/* IMAGE */}
       <div
-        className="w-full h-32 sm:h-40 bg-gray-200"
+        className="w-full h-32 sm:h-40 bg-gray-200 rounded-t-lg"
         style={{
           backgroundImage: `url(${product.image})`,
           backgroundSize: "cover",

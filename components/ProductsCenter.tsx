@@ -12,7 +12,6 @@ interface Product {
   description: string;
 }
 
-// All products
 const products: Product[] = [
   {
     id: 1,
@@ -70,7 +69,6 @@ const products: Product[] = [
   },
 ];
 
-// Select one or two sample products per category
 const sampleProducts: Product[] = [
   ...products.filter((p) => p.category === "Flat Products").slice(0, 2),
   ...products.filter((p) => p.category === "Long Products").slice(0, 2),
@@ -111,7 +109,7 @@ export default function ProductsCenter() {
               key={product.id}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-xl"
+              className="bg-white rounded-t-2xl rounded-b-none shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl"
             >
               <div className="h-52 w-full bg-gray-200">
                 <img

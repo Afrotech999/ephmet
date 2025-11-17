@@ -78,7 +78,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Phone */}
-            <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
               <Phone size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Phone</h3>
               <p className="text-gray-600 text-sm mb-2">+253 7750 6510</p>
@@ -88,7 +88,7 @@ export default function Contact() {
             </div>
 
             {/* Email */}
-            <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
               <Mail size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Email</h3>
               <p className="text-gray-600 text-sm mb-2">Ephmetdji@gmail.com</p>
@@ -98,10 +98,10 @@ export default function Contact() {
             </div>
 
             {/* Location */}
-            <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
               <MapPin size={32} className="text-gray-800 mb-4" />
               <h3 className="text-lg font-bold text-[#333] mb-2">Location</h3>
-              <p className="text-gray-600 text-sm mb-2">Djibouti</p>
+              <p className="text-gray-600 text-sm mb-2">Djibouti free zone</p>
               <p className="text-gray-600 text-sm">Main Office</p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Contact() {
                 Business Hours
               </h2>
               <div className="space-y-6">
-                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+                <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
                   <Clock size={24} className="text-gray-800 mb-4" />
                   <h3 className="text-lg font-bold text-[#333] mb-4">
                     Office Hours
@@ -219,7 +219,7 @@ export default function Contact() {
                   </ul>
                 </div>
 
-                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+                <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
                   <h3 className="text-lg font-bold text-[#333] mb-4">
                     Quick Response Times
                   </h3>
@@ -231,7 +231,7 @@ export default function Contact() {
                   </ul>
                 </div>
 
-                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+                <div className="p-6 bg-white border border-gray-200 rounded-none shadow-md">
                   <h3 className="text-lg font-bold text-[#333] mb-4">
                     Service Options
                   </h3>

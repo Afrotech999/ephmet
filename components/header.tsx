@@ -58,8 +58,8 @@ export function Header() {
                 href={link.href}
                 className={`px-4 py-2 text-base md:text-lg font-bold rounded-lg transition-all ${
                   scrolled
-                    ? "text-gray-800 hover:text-blue-700 hover:bg-gray-100"
-                    : "text-white drop-shadow-md hover:text-white hover:bg-white/20"
+                    ? "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                    : "text-gray-200 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
@@ -73,8 +73,8 @@ export function Header() {
               href="/contact"
               className={`px-5 py-2.5 text-base font-semibold rounded-lg shadow-md transition-colors ${
                 scrolled
-                  ? "bg-blue-700 text-white hover:bg-blue-800"
-                  : "bg-white/25 text-white backdrop-blur hover:bg-white/30"
+                  ? "bg-blue-600 text-white hover:bg-blue-700"
+                  : "bg-white/40 text-white backdrop-blur hover:bg-white/50"
               }`}
             >
               Get Quote
@@ -87,7 +87,6 @@ export function Header() {
             className={`md:hidden p-2 flex flex-col justify-center gap-1 transition-all`}
             aria-label="Toggle menu"
           >
-            {/* Custom Hamburger */}
             <span
               className={`block h-1 rounded bg-blue-500 transition-all duration-300 ${
                 isOpen ? "rotate-45 translate-y-2" : "w-6"
@@ -129,8 +128,8 @@ export function Header() {
                   onClick={() => setIsOpen(false)}
                   className={`px-4 py-3 rounded text-base font-bold transition ${
                     scrolled
-                      ? "text-gray-800 hover:bg-gray-100"
-                      : "text-white hover:bg-white/20"
+                      ? "text-gray-600 hover:bg-gray-50"
+                      : "text-gray-200 hover:bg-white/10"
                   }`}
                 >
                   {link.label}
@@ -142,8 +141,8 @@ export function Header() {
                 onClick={() => setIsOpen(false)}
                 className={`px-5 py-3 mt-2 rounded-lg text-base font-semibold transition-colors ${
                   scrolled
-                    ? "bg-blue-700 text-white hover:bg-blue-800"
-                    : "bg-white/25 text-white hover:bg-white/30"
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-white/40 text-white hover:bg-white/50"
                 }`}
               >
                 Get Quote

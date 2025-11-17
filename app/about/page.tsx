@@ -30,7 +30,6 @@ export default function About() {
             "linear-gradient(135deg, #f8f9fa 0%, #e5e7eb 50%, #f3f4f6 100%)",
         }}
       >
-        {/* Abstract moving steel lines */}
         <motion.div
           className="absolute inset-0"
           initial={{ x: -500 }}
@@ -61,9 +60,7 @@ export default function About() {
           >
             As a forward-thinking steel import and export company, we provide
             world-class steel solutions engineered to support Africa’s
-            fast-growing industrial, commercial, and infrastructure development.
-            With a commitment to innovation, quality, and global standards—our
-            mission is to build the future with strength.
+            industrial growth.
           </motion.p>
         </div>
       </section>
@@ -80,17 +77,11 @@ export default function About() {
             <h2 className="text-2xl font-bold text-[#333] mb-6">Who We Are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               With decades of industrial expertise, we are one of Djibouti’s
-              most trusted suppliers of high-grade steel products. Leveraging
-              strategic import partnerships and advanced facilities, we support
-              construction, manufacturing, and large-scale infrastructure
-              development.
+              most trusted suppliers of high-grade steel products.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our portfolio spans structural steel, rebars, sheets, coils,
-              pipes, and custom steel profiles sourced from world-certified
-              mills. We deliver reliability and excellence to contractors,
-              manufacturers, distributors, and government projects across the
-              region.
+              Our portfolio spans structural steel, coils, pipes, and more —
+              supporting contractors and major infrastructure projects.
             </p>
           </motion.div>
 
@@ -108,30 +99,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Stats
-      <section className="py-16 sm:py-20 bg-[#ECEEEF] border-y">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10 text-center">
-          {[
-            { label: "Years of Industry Experience", value: "15+" },
-            { label: "Tonnes Delivered Annually", value: "120,000+" },
-            { label: "Global Supply Partners", value: "20+" },
-            { label: "Major Projects Served", value: "500+" },
-          ].map((item, idx) => (
-            <motion.div
-              key={item.label}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.2 }}
-            >
-              <h3 className="text-4xl font-bold text-[#333]">{item.value}</h3>
-              <p className="text-gray-600 mt-2 text-sm">{item.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section> */}
-
       {/* Mission & Vision */}
       <section className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
@@ -139,17 +106,17 @@ export default function About() {
             {
               icon: <Target className="text-blue-600 mb-4" size={36} />,
               title: "Our Mission",
-              desc: "To deliver world-class steel products with unmatched precision, competitive value, and global-standard quality—empowering industries, construction companies, and national infrastructure projects across Djibouti and the Horn of Africa.",
+              desc: "To deliver world-class steel products with unmatched precision and reliability.",
             },
             {
               icon: <Award className="text-blue-600 mb-4" size={36} />,
               title: "Our Vision",
-              desc: "To be Africa’s most trusted steel supplier and industrial partner, recognized for operational excellence, reliability, and innovation—delivering the strength that builds nations.",
+              desc: "To be Africa’s most trusted steel supplier and industrial partner.",
             },
           ].map((item, idx) => (
             <motion.div
               key={item.title}
-              className="p-10 bg-white rounded-xl border shadow-sm"
+              className="p-10 bg-white border rounded-none shadow-lg hover:shadow-2xl transition"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -160,7 +127,7 @@ export default function About() {
               <h3 className="text-xl font-bold text-[#333] mb-4">
                 {item.title}
               </h3>
-              <p className="text-gray-600  leading-relaxed">{item.desc}</p>
+              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -177,27 +144,27 @@ export default function About() {
               {
                 icon: <ShieldCheck className="text-blue-700" size={32} />,
                 title: "Global Standard Quality",
-                desc: "We source from certified mills with stringent QA processes.",
+                desc: "We source from certified mills with strict QA.",
               },
               {
                 icon: <Factory className="text-blue-700" size={32} />,
                 title: "Reliable Supply Chain",
-                desc: "Strong international partnerships ensure uninterrupted supply.",
+                desc: "Strong global partnerships ensure continuous supply.",
               },
               {
                 icon: <Layers className="text-blue-700" size={32} />,
                 title: "Wide Product Portfolio",
-                desc: "From structural steel to specialty alloys—we cover all needs.",
+                desc: "From structural steel to specialty alloys.",
               },
               {
                 icon: <Globe2 className="text-blue-700" size={32} />,
                 title: "International Reach",
-                desc: "We work with world-leading manufacturers across multiple countries.",
+                desc: "We partner with world-leading manufacturers.",
               },
             ].map((item, idx) => (
               <motion.div
                 key={item.title}
-                className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition"
+                className="p-6 bg-white border rounded-none shadow-lg hover:shadow-2xl transition"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -226,22 +193,22 @@ export default function About() {
               {
                 year: "2010",
                 event: "Company Established",
-                desc: "Launched with the mission to elevate the steel supply industry.",
+                desc: "Launched with a mission to elevate steel supply.",
               },
               {
                 year: "2016",
                 event: "Global Expansion",
-                desc: "Formed strategic partnerships with international steel mills.",
+                desc: "Formed strong partnerships with global mills.",
               },
               {
                 year: "2021",
                 event: "Quality Certifications",
-                desc: "Achieved multiple international quality and safety certifications.",
+                desc: "Achieved multiple international certifications.",
               },
               {
                 year: "2024",
-                event: "Regional Market Leadership",
-                desc: "Recognized as one of the region’s most trusted steel suppliers.",
+                event: "Regional Leadership",
+                desc: "Recognized as a top steel supplier in the region.",
               },
             ].map((item, idx) => (
               <motion.div
@@ -257,7 +224,7 @@ export default function About() {
                   <div className="w-4 h-4 bg-blue-600 rounded-full mx-auto mb-4" />
                   <div className="text-blue-700 font-bold">{item.year}</div>
                 </div>
-                <div className="p-6 bg-white border rounded-xl shadow-sm flex-1">
+                <div className="p-6 bg-white border rounded-none shadow-lg hover:shadow-2xl transition flex-1">
                   <h3 className="font-bold text-[#333] mb-1">{item.event}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
                 </div>

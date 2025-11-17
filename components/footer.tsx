@@ -58,7 +58,9 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent mt-1 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">Djibouti</span>
+                <span className="text-gray-400 text-sm">
+                  Djibouti free zone{" "}
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="text-accent mt-1 flex-shrink-0" />
