@@ -101,21 +101,26 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm flex items-center gap-2">
-            © 2025 EPHMET RED SEA FZCO. All rights reserved. | Build by{" "}
-            <Link
-              href="https://thrivingsolutions.com"
-              target="_blank"
-              className="flex items-center gap-2 hover:text-white transition-colors"
-            >
-              <img
-                src="/thriving-solutions-logo.png"
-                alt="Thriving Solutions Logo"
-                className="w-6 h-auto" // smaller logo
-              />
-              Thriving Solutions
-            </Link>
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-gray-500 text-sm">
+            <span>© 2025 EPHMET RED SEA FZCO. All rights reserved.</span>
+            <span className="hidden sm:inline">|</span>
+            <span className="flex items-center gap-2">
+              Build by
+              <Link
+                href="https://thrivingsolutions.com"
+                target="_blank"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <img
+                  src="/thriving-solutions-logo.png"
+                  alt="Thriving Solutions Logo"
+                  className="w-5 h-auto sm:w-6" // smaller and responsive
+                />
+                Thriving Solutions
+              </Link>
+            </span>
+          </div>
+
           <div className="flex gap-6">
             <Link
               href="#"
