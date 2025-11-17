@@ -59,7 +59,7 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent mt-1 flex-shrink-0" />
                 <span className="text-gray-400 text-sm">
-                  Djibouti free zone{" "}
+                  Djibouti free zone
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -101,8 +101,20 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2025 EPHMET RED SEA FZCO. All rights reserved.
+          <p className="text-gray-500 text-sm flex items-center gap-2">
+            © 2025 EPHMET RED SEA FZCO. All rights reserved. | Build by{" "}
+            <Link
+              href="https://thrivingsolutions.com"
+              target="_blank"
+              className="flex items-center gap-2 hover:text-white transition-colors"
+            >
+              <img
+                src="/thriving-solutions-logo.png"
+                alt="Thriving Solutions Logo"
+                className="w-6 h-auto" // smaller logo
+              />
+              Thriving Solutions
+            </Link>
           </p>
           <div className="flex gap-6">
             <Link
