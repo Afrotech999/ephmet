@@ -23,13 +23,14 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
       }}
     >
       {/* Logo */}
+
       <img
         src="/logo.png"
         alt="EPHMET Logo"
-        className="w-24 h-24 mb-6 animate-pulse"
+        className="w-36 h-36 mb-6 animate-pulse"
       />
 
-      {/* Company Name with same font as header */}
+      {/* Company Name */}
       <h1
         className="text-3xl font-bold text-white mb-6"
         style={{ fontFamily: "AquireLight, sans-serif", fontWeight: 400 }}
@@ -37,8 +38,14 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
         EPHMET
       </h1>
 
-      {/* Loading Spinner */}
-      <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+      {/* MP4 Loader */}
+      <video
+        src="/loading.mp4" // make sure it's in /public
+        autoPlay
+        loop
+        muted
+        className="w-28 h-28 object-contain"
+      />
     </div>
   );
 }

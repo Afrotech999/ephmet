@@ -18,7 +18,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 sm:py-28 border-b"
+        className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 border-b"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
@@ -33,7 +33,7 @@ export default function About() {
           <p className="text-base sm:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
             As a forward-thinking steel import and export company, we provide
             world-class steel solutions engineered to support Africa’s
-            industrial growth.
+            industrial growth and development
           </p>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function About() {
           </div>
 
           <div
-            className="h-[300px] rounded-xl border shadow bg-cover bg-center"
+            className="h-[300px] rounded-xl shadow-2xl bg-cover bg-center"
             style={{
               backgroundImage:
                 "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1zlGDl-mkAf0tmvM5jTc4-EPgvVrExPFoLQbgZM7JpFvSAkJNmjNcbjPxvXs73YIm8yqhTj3b')",
@@ -80,7 +80,7 @@ export default function About() {
           ].map((item) => (
             <div
               key={item.title}
-              className="p-10 bg-white   shadow-2xl rounded-xl hover:shadow-2xl transition"
+              className="p-10 bg-white shadow-2xl rounded-xl hover:shadow-2xl transition"
             >
               {item.icon}
               <h3 className="text-xl font-bold text-[#333] mb-4">
@@ -123,7 +123,7 @@ export default function About() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="p-6 bg-white border rounded-none shadow-lg hover:shadow-2xl transition"
+                className="p-6 bg-white shadow-2xl hover:shadow-2xl transition rounded-xl"
               >
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="font-bold text-lg text-[#333] mb-2">
@@ -170,7 +170,7 @@ export default function About() {
                   <div className="w-4 h-4 bg-blue-600 rounded-full mx-auto mb-4" />
                   <div className="text-blue-700 font-bold">{item.year}</div>
                 </div>
-                <div className="p-6 bg-white border rounded-none shadow-lg hover:shadow-2xl transition flex-1">
+                <div className="p-6 bg-white shadow-2xl hover:shadow-2xl transition flex-1 rounded-xl">
                   <h3 className="font-bold text-[#333] mb-1">{item.event}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
                 </div>

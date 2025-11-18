@@ -80,11 +80,11 @@ export function EphmetSpotlight() {
 
           {/* Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
-            <h2 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight">
               Steel Structure Project
             </h2>
 
-            <p className="text-base sm:text-lg lg:text-2xl text-gray-700 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0">
               A complete structural steel solution for a multi-purpose
               industrial facility. Precision fabrication, advanced structural
               integration, and engineered durability ensure decades of reliable
@@ -94,7 +94,7 @@ export function EphmetSpotlight() {
             <div className="flex justify-center lg:justify-start">
               <Link
                 href="/projects"
-                className="group inline-flex items-center px-8 sm:px-10 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base sm:text-lg rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group inline-flex items-center px-8 sm:px-10 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base sm:text-base rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 View Full Project
                 <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-2" />

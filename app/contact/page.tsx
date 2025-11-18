@@ -61,12 +61,20 @@ export default function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#ECEEEF] border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-5xl font-bold text-[#333] mb-6">
+      <section
+        className="relative flex flex-col justify-center items-center pt-32 sm:pt-40 pb-20 sm:pb-28 border-b"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="max-w-3xl text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">
             Get in Touch
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
+          <p className="text-base sm:text-xl text-white/90 leading-relaxed drop-shadow-md">
             Have questions about our products or services? We're here to help.
             Reach out to us today.
           </p>

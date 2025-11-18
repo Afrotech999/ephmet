@@ -168,7 +168,7 @@ export default function Products() {
 
       {/* HERO */}
       <section
-        className="relative py-16 sm:py-24 border-b"
+        className="relative pt-32 sm:pt-40 pb-32 sm:pb-40 border-b"
         style={{
           backgroundImage:
             "linear-gradient(rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
@@ -178,13 +178,14 @@ export default function Products() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+          <h1 className="text-3xl sm:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             Products & Services
           </h1>
 
-          <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-            Explore our range of high-quality steel products, bitumen solutions,
-            and heavy-duty trucks.
+          <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            Explore our extensive range of high-quality steel products, premium
+            bitumen solutions, and heavy-duty trucks for every industrial and
+            commercial need.
           </p>
         </div>
       </section>
