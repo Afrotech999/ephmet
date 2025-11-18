@@ -42,7 +42,7 @@ export function FeaturesSection() {
             return (
               <div
                 key={feature.title}
-                className="p-8 bg-gray-100 border border-gray-200 shadow-sm 
+                className="p-8 bg-gray-100  border-gray-200 shadow-lg 
                 hover:shadow-md transition-transform transform hover:-translate-y-1 
                 group text-center"
               >

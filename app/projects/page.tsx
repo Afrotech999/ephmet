@@ -111,7 +111,7 @@ export default function Projects() {
               className={`px-7 py-2.5 rounded-xl font-semibold transition-all text-base ${
                 selectedCategory === cat.id
                   ? "bg-[#333] text-white shadow"
-                  : "bg-white border text-[#333] hover:border-[#555]"
+                  : "bg-white  text-[#333] "
               }`}
             >
               {cat.label}
