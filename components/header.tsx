@@ -18,7 +18,7 @@ export function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200"
-          : "bg-gray-800/40 backdrop-blur-md"
+          : "bg-transparent backdrop-blur-none"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +56,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 text-base md:text-lg font-bold rounded-lg transition-all ${
+                className={`px-4 py-2 text-base md:text-lg font-light rounded-lg transition-all ${
                   scrolled
                     ? "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                     : "text-gray-200 hover:text-white hover:bg-white/10"
@@ -68,18 +68,6 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <Link
-              href="/contact"
-              className={`px-5 py-2.5 text-base font-semibold rounded-lg shadow-md transition-colors ${
-                scrolled
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-white/40 text-white backdrop-blur hover:bg-white/50"
-              }`}
-            >
-              Get Quote
-            </Link>
-          </div>
 
           {/* Mobile Toggle */}
           <button
@@ -135,18 +123,6 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className={`px-5 py-3 mt-2 rounded-lg text-base font-semibold transition-colors ${
-                  scrolled
-                    ? "bg-blue-600 text-white hover:bg-blue-700"
-                    : "bg-white/40 text-white hover:bg-white/50"
-                }`}
-              >
-                Get Quote
-              </Link>
             </div>
           </div>
         )}

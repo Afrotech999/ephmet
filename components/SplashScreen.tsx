@@ -19,7 +19,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     <div
       className="fixed inset-0 flex flex-col items-center justify-center z-50"
       style={{
-        background: "linear-gradient(135deg, #0a192f, #1e3a5f)", // soft blue-black gradient
+        background: "linear-gradient(135deg, #0a192f, #1e3a5f)",
       }}
     >
       {/* Logo */}

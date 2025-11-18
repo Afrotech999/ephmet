@@ -167,13 +167,22 @@ export default function Products() {
       <Header />
 
       {/* HERO */}
-      <section className="relative py-16 sm:py-24 bg-gradient-to-b from-zinc-100 to-zinc-200 border-b border-zinc-300">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-3xl sm:text-5xl font-bold text-zinc-800 mb-4">
+      <section
+        className="relative py-16 sm:py-24 border-b"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             Products & Services
           </h1>
 
-          <p className="text-lg text-zinc-600 max-w-3xl leading-relaxed">
+          <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
             Explore our range of high-quality steel products, bitumen solutions,
             and heavy-duty trucks.
           </p>

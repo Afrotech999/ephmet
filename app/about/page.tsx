@@ -10,12 +10,6 @@ import {
   ShieldCheck,
   Layers,
 } from "lucide-react";
-import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
 
 export default function About() {
   return (
@@ -24,56 +18,30 @@ export default function About() {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 sm:py-28 border-b overflow-hidden"
+        className="relative py-20 sm:py-28 border-b"
         style={{
-          background:
-            "linear-gradient(135deg, #f8f9fa 0%, #e5e7eb 50%, #f3f4f6 100%)",
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <motion.div
-          className="absolute inset-0"
-          initial={{ x: -500 }}
-          animate={{ x: 500 }}
-          transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-        >
-          <div className="absolute h-[2px] w-96 bg-gray-300/40 top-1/4 rotate-6" />
-          <div className="absolute h-[2px] w-72 bg-gray-400/40 top-1/2 rotate-12" />
-          <div className="absolute h-[2px] w-80 bg-gray-500/30 top-3/4 rotate-3" />
-        </motion.div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            className="text-3xl sm:text-6xl font-extrabold text-[#333] tracking-tight mb-6"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <h1 className="text-3xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">
             Precision. Strength. Reliability.
-          </motion.h1>
-          <motion.p
-            className="text-base sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          </h1>
+          <p className="text-base sm:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
             As a forward-thinking steel import and export company, we provide
             world-class steel solutions engineered to support Africa’s
             industrial growth.
-          </motion.p>
+          </p>
         </div>
       </section>
 
       {/* Company Overview */}
       <section className="py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div>
             <h2 className="text-2xl font-bold text-[#333] mb-6">Who We Are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               With decades of industrial expertise, we are one of Djibouti’s
@@ -83,18 +51,14 @@ export default function About() {
               Our portfolio spans structural steel, coils, pipes, and more —
               supporting contractors and major infrastructure projects.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="h-[300px] rounded-xl border shadow bg-cover bg-center"
             style={{
               backgroundImage:
                 "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1zlGDl-mkAf0tmvM5jTc4-EPgvVrExPFoLQbgZM7JpFvSAkJNmjNcbjPxvXs73YIm8yqhTj3b')",
             }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
           />
         </div>
       </section>
@@ -113,22 +77,17 @@ export default function About() {
               title: "Our Vision",
               desc: "To be Africa’s most trusted steel supplier and industrial partner.",
             },
-          ].map((item, idx) => (
-            <motion.div
+          ].map((item) => (
+            <div
               key={item.title}
-              className="p-10 bg-white border rounded-none shadow-lg hover:shadow-2xl transition"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.2 }}
+              className="p-10 bg-white   shadow-2xl rounded-xl hover:shadow-2xl transition"
             >
               {item.icon}
               <h3 className="text-xl font-bold text-[#333] mb-4">
                 {item.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -161,22 +120,17 @@ export default function About() {
                 title: "International Reach",
                 desc: "We partner with world-leading manufacturers.",
               },
-            ].map((item, idx) => (
-              <motion.div
+            ].map((item) => (
+              <div
                 key={item.title}
                 className="p-6 bg-white border rounded-none shadow-lg hover:shadow-2xl transition"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
               >
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="font-bold text-lg text-[#333] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -210,16 +164,8 @@ export default function About() {
                 event: "Regional Leadership",
                 desc: "Recognized as a top steel supplier in the region.",
               },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="flex gap-6"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
-              >
+            ].map((item) => (
+              <div key={item.year} className="flex gap-6">
                 <div className="text-center">
                   <div className="w-4 h-4 bg-blue-600 rounded-full mx-auto mb-4" />
                   <div className="text-blue-700 font-bold">{item.year}</div>
@@ -228,7 +174,7 @@ export default function About() {
                   <h3 className="font-bold text-[#333] mb-1">{item.event}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

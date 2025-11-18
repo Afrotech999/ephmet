@@ -73,19 +73,25 @@ export default function Projects() {
     <div className="min-h-screen bg-[#F4F5F7]">
       <Header />
 
-      {/* HERO */}
+      {/* HERO WITH GRADIENT BACKGROUND */}
       <motion.section
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="py-16 sm:py-24 bg-[#ECEEEF] border-b"
+        className="relative py-20 sm:py-28 border-b"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(10, 25, 50, 1), rgba(0, 0, 0, 0.5))",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-5xl font-bold text-[#333] mb-6">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-6">
             Projects Portfolio
           </h1>
 
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+          <p className="text-xl text-gray-200 max-w-2xl leading-relaxed">
             A selection of our completed steel, infrastructure, and industrial
             engineering projects — delivered with precision, durability, and
             world-class standards.

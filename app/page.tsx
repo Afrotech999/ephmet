@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import ProductsCenter from "@/components/ProductsCenter";
 import SocialSidebar from "@/components/SocialSidebar";
 import SplashScreen from "@/components/SplashScreen";
+import { EphmetSpotlight } from "@/components/project";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
           <HeroSection />
           <FeaturesSection />
           <ProductsCenter />
+          <EphmetSpotlight />
           <Footer />
         </div>
       )}
