@@ -10,8 +10,25 @@ import {
   ShieldCheck,
   Layers,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const images = [
+    "https://www.diftz.dj/uploads/allimg/20240731/1-240I1154G0228.jpg",
+    "https://i.pinimg.com/1200x/c9/89/fd/c989fd71e10840a46963f7b11dc3c5c4.jpg",
+    "https://i.pinimg.com/736x/20/e2/72/20e272de483003c29fec4d58cebf618b.jpg",
+  ];
+
+  const [active, setActive] = useState(0);
+
+  // Auto-rotate images every 3s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F4F5F7]">
       <Header />
@@ -33,7 +50,7 @@ export default function About() {
           <p className="text-base sm:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
             As a forward-thinking steel import and export company, we provide
             world-class steel solutions engineered to support Africa’s
-            industrial growth and development
+            industrial growth and development.
           </p>
         </div>
       </section>
@@ -53,13 +70,37 @@ export default function About() {
             </p>
           </div>
 
-          <div
-            className="h-[300px] rounded-xl shadow-2xl bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1zlGDl-mkAf0tmvM5jTc4-EPgvVrExPFoLQbgZM7JpFvSAkJNmjNcbjPxvXs73YIm8yqhTj3b')",
-            }}
-          />
+          {/* 3 Image Card Rotation (styled like screenshot) */}
+          <div className="relative h-[320px] sm:h-[360px] flex items-center justify-center">
+            {images.map((img, idx) => {
+              const isActive = idx === active;
+              const isPrev =
+                (active - 1 + images.length) % images.length === idx;
+              const isNext = (active + 1) % images.length === idx;
+
+              return (
+                <div
+                  key={idx}
+                  className={`
+          absolute w-[85%] h-[85%] bg-cover bg-center rounded-xl shadow-2xl 
+          transition-all duration-[900ms] ease-[cubic-bezier(.4,0,.2,1)]
+          ${isActive ? "z-30 scale-105 opacity-100 rotate-[2deg]" : ""}
+          ${
+            isPrev
+              ? "z-20 scale-95 opacity-70 -rotate-[6deg] -translate-x-6"
+              : ""
+          }
+          ${
+            isNext ? "z-10 scale-90 opacity-50 rotate-[6deg] translate-x-6" : ""
+          }
+        `}
+                  style={{
+                    backgroundImage: `url('${img}')`,
+                  }}
+                ></div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
