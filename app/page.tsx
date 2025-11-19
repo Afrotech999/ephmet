@@ -9,6 +9,7 @@ import ProductsCenter from "@/components/ProductsCenter";
 import SocialSidebar from "@/components/SocialSidebar";
 import SplashScreen from "@/components/SplashScreen";
 import { EphmetSpotlight } from "@/components/project";
+import GallerySection from "@/components/GallerySection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function Home() {
           <FeaturesSection />
           <ProductsCenter />
           <EphmetSpotlight />
+          <GallerySection />
           <Footer />
         </div>
       )}
