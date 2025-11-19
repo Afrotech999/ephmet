@@ -19,7 +19,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     <div
       className="fixed inset-0 flex flex-col items-center justify-center z-50"
       style={{
-        background: "linear-gradient(135deg, #0a192f, #1e3a5f)",
+        background: "linear-gradient(135deg, #fff, #fff)",
       }}
     >
       {/* Logo */}
@@ -27,20 +27,20 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
       <img
         src="/logo.png"
         alt="EPHMET Logo"
-        className="w-36 h-36 mb-6 animate-pulse"
+        className="w-24 h-24  sm:w-52 sm:h-52 mb-6 animate-pulse"
       />
 
       {/* Company Name */}
       <h1
-        className="text-3xl font-bold text-white mb-6"
-        style={{ fontFamily: "AquireLight, sans-serif", fontWeight: 400 }}
+        className="text-3xl sm:6x1 font-bold text-blue-600 mb-6"
+        style={{ fontFamily: "AquireLight, sans-serif", fontWeight: 500 }}
       >
         EPHMET
       </h1>
 
       {/* MP4 Loader */}
       <video
-        src="/loading.mp4" // make sure it's in /public
+        src="/loading.mp4"
         autoPlay
         loop
         muted

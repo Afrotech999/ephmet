@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -111,7 +113,7 @@ export default function Projects() {
               className={`px-7 py-2.5 rounded-xl font-semibold transition-all text-base ${
                 selectedCategory === cat.id
                   ? "bg-[#333] text-white shadow"
-                  : "bg-white  text-[#333] "
+                  : "bg-white text-[#333]"
               }`}
             >
               {cat.label}
@@ -191,12 +193,14 @@ export default function Projects() {
             expert engineering.
           </p>
 
-          <a
+          {/* FIXED BUTTON USING NEXT LINK */}
+          <Link
             href="/contact"
-            className="inline-block px-10 py-4 bg-[#333] text-white text-lg font-bold rounded-lg hover:bg-[#555] transition-colors"
+            className="group inline-flex items-center px-8 sm:px-10 py-3 sm:py-4 bg-[#333] hover:bg-[#555] text-white font-semibold text-lg rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
             Start Your Project
-          </a>
+            <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-2" />
+          </Link>
         </div>
       </motion.section>
 

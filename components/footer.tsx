@@ -107,7 +107,7 @@ export function Footer() {
             <span className="flex items-center gap-2">
               Build by
               <Link
-                href="https://thrivingsolutions.com"
+                href="https://www.thrivingsolution.org/"
                 target="_blank"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
