@@ -191,7 +191,6 @@ export const products: Product[] = [
     slug: "heavy-plates",
     line: "flat",
     glyph: "plate",
-    photo: "/img/products/plates",
     unit: "t",
     key: "6–150 mm × 1500–3000 mm · S355J2 · A36",
     name: { en: "Heavy plates", zh: "中厚板", fr: "Tôles fortes", ar: "ألواح صلب سميكة" },
