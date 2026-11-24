@@ -28,6 +28,8 @@ export type Product = {
   glyph: GlyphKind;
   /** Base path of an optimized photo in /public, without "-640.webp". */
   photo?: string;
+  /** "contain" for cut-out product shots on white, shown whole instead of cropped. */
+  photoFit?: "cover" | "contain";
   unit: "t" | "units";
   /** Language-neutral key specification shown in lists. */
   key: string;
@@ -473,6 +475,8 @@ export const products: Product[] = [
     slug: "road-grade-bitumen",
     line: "bitumen",
     glyph: "drum",
+    photo: "/img/products/bitumen-vg",
+    photoFit: "contain",
     unit: "t",
     key: "VG-10 · VG-30 · VG-40",
     name: {
@@ -497,6 +501,8 @@ export const products: Product[] = [
     slug: "penetration-grade-bitumen",
     line: "bitumen",
     glyph: "drum",
+    photo: "/img/products/bitumen-pen",
+    photoFit: "contain",
     unit: "t",
     key: "40/50 · 60/70 · 80/100",
     name: {
@@ -521,6 +527,8 @@ export const products: Product[] = [
     slug: "sinotruk-howo-dump-truck",
     line: "trucks",
     glyph: "dump",
+    photo: "/img/products/dump-truck",
+    photoFit: "contain",
     unit: "units",
     key: "6×4 · 8×4 · 336–430 hp",
     name: {
@@ -550,6 +558,8 @@ export const products: Product[] = [
     slug: "sinotruk-howo-cargo-truck",
     line: "trucks",
     glyph: "cargo",
+    photo: "/img/products/cargo-truck",
+    photoFit: "contain",
     unit: "units",
     key: "6×4 · 8×4 · 7.6–9.6 m",
     name: {
@@ -602,9 +612,9 @@ export function specValue(value: string | L, locale: Locale): string {
 }
 
 /** Line cover: a real photo where we have one, otherwise a drawn glyph. */
-export const lineCover: Record<LineId, { photo?: string; glyph: GlyphKind }> = {
+export const lineCover: Record<LineId, { photo?: string; fit?: "cover" | "contain"; glyph: GlyphKind }> = {
   flat: { photo: "/img/gallery/photo9", glyph: "coil" },
   long: { photo: "/img/products/rebar", glyph: "rebar" },
-  bitumen: { glyph: "drum" },
-  trucks: { glyph: "dump" },
+  bitumen: { photo: "/img/products/bitumen-vg", fit: "contain", glyph: "drum" },
+  trucks: { photo: "/img/products/dump-truck", fit: "contain", glyph: "dump" },
 };

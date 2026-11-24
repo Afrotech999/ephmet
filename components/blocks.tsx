@@ -39,6 +39,7 @@ export function Photo({
   sizes = "(min-width: 1024px) 33vw, 100vw",
   large = true,
   priority = false,
+  fit = "cover",
   className = "",
 }: {
   base: string;
@@ -46,6 +47,7 @@ export function Photo({
   sizes?: string;
   large?: boolean;
   priority?: boolean;
+  fit?: "cover" | "contain";
   className?: string;
 }) {
   return (
@@ -57,16 +59,17 @@ export function Photo({
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : undefined}
       decoding="async"
-      className={`h-full w-full object-cover ${className}`}
+      className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"} ${className}`}
     />
   );
 }
 
 export function ProductMedia({ product, alt, className = "" }: { product: Product; alt: string; className?: string }) {
   if (product.photo) {
+    const contain = product.photoFit === "contain";
     return (
-      <div className={`overflow-hidden bg-steel-2 ${className}`}>
-        <Photo base={product.photo} alt={alt} large={false} />
+      <div className={`overflow-hidden ${contain ? "bg-white p-[4%]" : "bg-steel-2"} ${className}`}>
+        <Photo base={product.photo} alt={alt} large={contain} sizes="(min-width: 1024px) 50vw, 100vw" fit={product.photoFit} />
       </div>
     );
   }

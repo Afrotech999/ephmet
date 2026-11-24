@@ -74,7 +74,13 @@ export function HomeView({ locale }: { locale: Locale }) {
                     className="group relative block aspect-[4/5] overflow-hidden rounded-lg text-white sm:aspect-[4/3] lg:aspect-[3/4]"
                   >
                     {cover.photo ? (
+                      cover.fit === "contain" ? (
+                      <div className="size-full bg-white px-[10%] pb-[46%] pt-[6%]">
+                        <Photo base={cover.photo} alt="" large={false} fit="contain" className="transition-transform duration-500 group-hover:scale-105" />
+                      </div>
+                    ) : (
                       <Photo base={cover.photo} alt="" large={false} className="transition-transform duration-500 group-hover:scale-105" />
+                    )
                     ) : (
                       <div className="blueprint flex size-full justify-center pt-[14%]">
                         <Glyph kind={cover.glyph} className="h-auto w-[68%] max-w-48 self-start" />
