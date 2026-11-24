@@ -405,6 +405,7 @@ export const products: Product[] = [
     slug: "merchant-bars",
     line: "long",
     glyph: "bars",
+    photo: "/img/products/merchant-bars",
     unit: "t",
     key: "▭ 12–200 × 3–30 mm · Ø 10–100 mm",
     name: {
@@ -430,6 +431,8 @@ export const products: Product[] = [
     slug: "hollow-sections",
     line: "long",
     glyph: "hollow",
+    photo: "/img/products/hollow-sections",
+    photoFit: "contain",
     unit: "t",
     key: "□ 20–400 mm · t 1.2–16 mm · S355J2H",
     name: {
