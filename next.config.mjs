@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Plain HTML files in /out: works on Vercel and on any static host.
   output: "export",
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
+  images: { unoptimized: true },
+  experimental: {
+    // One 404 page across the English and the /zh, /fr, /ar root layouts.
+    globalNotFound: true,
   },
 };
 
