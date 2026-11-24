@@ -141,6 +141,7 @@ export const products: Product[] = [
     slug: "cold-rolled-coils-sheets",
     line: "flat",
     glyph: "coil",
+    photo: "/img/products/cold-rolled",
     unit: "t",
     key: "0.15–3.0 mm × 600–1500 mm · SPCC · DC01",
     name: {
@@ -166,6 +167,7 @@ export const products: Product[] = [
     slug: "full-hard-coils",
     line: "flat",
     glyph: "coil",
+    photo: "/img/products/full-hard",
     unit: "t",
     key: "0.12–2.0 mm · SPCC-1B · G550",
     name: {
@@ -212,7 +214,7 @@ export const products: Product[] = [
     slug: "pre-painted-galvanized-coils",
     line: "flat",
     glyph: "coil",
-    photo: "/img/products/prepainted",
+    photo: "/img/products/ppgi",
     unit: "t",
     key: "0.12–1.0 mm · RAL · PE / SMP",
     name: {
@@ -299,6 +301,7 @@ export const products: Product[] = [
     slug: "billets",
     line: "long",
     glyph: "billet",
+    photo: "/img/products/billets",
     unit: "t",
     key: "100×100–200×200 mm · 3SP · 5SP",
     name: { en: "Billets", zh: "钢坯", fr: "Billettes", ar: "بليت الصلب" },
