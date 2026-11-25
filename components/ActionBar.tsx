@@ -30,12 +30,12 @@ export function ActionBar({
         <a href={`tel:${site.tel}`} aria-label={`${text.call} ${site.phone}`} className="btn btn-outline px-0">
           <Phone className="size-5" aria-hidden="true" />
         </a>
-        <a href={whatsappLink()} target="_blank" rel="noopener" className="btn btn-wa px-3">
+        <a href={whatsappLink()} target="_blank" rel="noopener" className="btn btn-wa px-2 text-[15px]">
           <WhatsAppIcon />
           {text.whatsapp}
         </a>
         {!onContact && (
-          <Link href={localePath(locale, "/contact")} className="btn btn-primary px-3">
+          <Link href={localePath(locale, "/contact")} className="btn btn-primary px-2 text-[15px]">
             {items.length > 0 ? (
               <>
                 {text.quoteList}

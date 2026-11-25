@@ -52,7 +52,7 @@ const en = {
   },
   units: { products: "products", t: "t", units: "units" },
   home: {
-    eyebrow: "Steel importer · Djibouti Free Zone",
+    eyebrow: "Import & export · Djibouti Free Zone",
     title: "Steel, bitumen and trucks, shipped through {place}.",
     place: "Djibouti",
     lead: "Importer and exporter of flat and long steel, bitumen and Sinotruk trucks for contractors, fabricators and traders across East Africa.",
