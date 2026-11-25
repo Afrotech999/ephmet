@@ -54,7 +54,7 @@ const fr: Dict = {
   },
   units: { products: "produits", t: "t", units: "unités" },
   home: {
-    eyebrow: "Ephmet Red Sea FZCO · Zone franche de Djibouti",
+    eyebrow: "Négoce d'acier · Zone franche de Djibouti",
     title: "Acier, bitume et camions, expédiés via {place}.",
     place: "Djibouti",
     lead: "Importateur et exportateur de produits plats et longs en acier, de bitume et de camions Sinotruk pour les entreprises, ateliers et négociants d'Afrique de l'Est.",

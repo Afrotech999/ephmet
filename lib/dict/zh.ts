@@ -50,7 +50,7 @@ const zh: Dict = {
   },
   units: { products: "种产品", t: "吨", units: "台" },
   home: {
-    eyebrow: "Ephmet Red Sea FZCO · 吉布提自由区",
+    eyebrow: "钢材进出口 · 吉布提自由区",
     title: "钢材、沥青和卡车，经{place}发往东非。",
     place: "吉布提",
     lead: "我们进出口板材、长材、沥青及中国重汽卡车，服务东非各地的承包商、加工厂和贸易商。",
