@@ -11,13 +11,6 @@ import { FooterLanguages } from "./LanguageSwitcher";
 export function Footer({ locale, t }: { locale: Locale; t: Dict }) {
   const year = new Date().getFullYear();
   const linkClass = "inline-flex min-h-10 items-center text-[15px] text-white/70 transition-colors hover:text-white";
-  const credit = (
-    <>
-      <span>{t.footer.builtBy}</span>
-      <img src={site.builtBy.logo} alt={site.builtBy.name} width={80} height={22} className="h-[18px] w-auto" />
-    </>
-  );
-
   return (
     <footer className="relative overflow-hidden bg-ink text-white">
       <div className="wrap relative pt-12 sm:pt-16">
@@ -116,36 +109,42 @@ export function Footer({ locale, t }: { locale: Locale; t: Dict }) {
         </div>
       </div>
 
-      {/* Oversized wordmark: the footer's one decorative gesture. */}
-      <div className="wrap pointer-events-none select-none" aria-hidden="true">
-        <p
-          dir="ltr"
-          className="mt-10 font-[family-name:var(--font-wordmark)] text-[25vw] leading-[0.8] tracking-[0.04em] text-transparent [-webkit-text-stroke:1px_rgb(88_176_242/0.28)] lg:mt-14 lg:text-[218px]"
-        >
-          EPHMET
-        </p>
+      {/* Oversized outlined wordmark, drawn to its exact letter bounds so it spans the content width. */}
+      <div className="wrap pointer-events-none mt-10 select-none lg:mt-14" aria-hidden="true">
+        <svg viewBox="5 -67 417.4 67" direction="ltr" className="block h-auto w-full overflow-visible" fill="none" style={{ direction: "ltr" }}>
+          <text
+            x="0"
+            y="0"
+            fontSize="100"
+            letterSpacing="4"
+            stroke="rgb(88 176 242 / 0.3)"
+            strokeWidth="1"
+            vectorEffect="non-scaling-stroke"
+            textAnchor="start"
+            style={{ fontFamily: "var(--font-wordmark)", direction: "ltr", unicodeBidi: "isolate" }}
+          >
+            EPHMET
+          </text>
+        </svg>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="wrap flex flex-col gap-4 py-5 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mt-8 border-t border-white/10 lg:mt-10">
+        <div className="wrap flex flex-col gap-3 py-5 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
           <FooterLanguages locale={locale} label={t.nav.language} />
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <p>{fill(t.footer.rights, { year })}</p>
-            <p className="flex gap-4">
-              <Link href={localePath(locale, "/privacy")} className="hover:text-white">
-                {t.footer.privacy}
-              </Link>
-              <Link href={localePath(locale, "/terms")} className="hover:text-white">
-                {t.footer.terms}
-              </Link>
-            </p>
-            {site.builtBy.url ? (
-              <a href={site.builtBy.url} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-white">
-                {credit}
+            <Link href={localePath(locale, "/privacy")} className="hover:text-white">
+              {t.footer.privacy}
+            </Link>
+            <Link href={localePath(locale, "/terms")} className="hover:text-white">
+              {t.footer.terms}
+            </Link>
+            <p>
+              {t.footer.builtBy}{" "}
+              <a href={site.builtBy.url} target="_blank" rel="noopener" className="text-white/80 underline decoration-white/30 underline-offset-4 hover:text-white">
+                {site.builtBy.name}
               </a>
-            ) : (
-              <p className="flex items-center gap-2">{credit}</p>
-            )}
+            </p>
           </div>
         </div>
       </div>
