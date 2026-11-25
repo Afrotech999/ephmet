@@ -8,7 +8,8 @@ export const site = {
   email: "ephmetdji@gmail.com",
   youtubeId: "086dMAnmI6g",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Djibouti+Free+Zone",
-  builtBy: { name: "Thriving Solutions", url: "https://www.thrivingsolution.org/" },
+  /** The studio that built the site. Add its web address to `url` to make the credit a link. */
+  builtBy: { name: "Loom Solutions", logo: "/img/loom-solutions.png", url: "" },
 } as const;
 
 export function whatsappLink(text?: string): string {

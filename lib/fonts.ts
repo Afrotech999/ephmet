@@ -30,10 +30,10 @@ export const plexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const aquire = localFont({
-  src: "./aquire-light.otf",
+  src: "./aquire-regular.otf",
   variable: "--font-aquire",
   display: "swap",
-  weight: "300",
+  weight: "400",
 });
 
 export const latinFontVars = [barlow.variable, plex.variable, plexMono.variable, aquire.variable].join(" ");

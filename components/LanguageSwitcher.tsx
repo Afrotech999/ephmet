@@ -114,3 +114,31 @@ export function LanguageRow({ locale }: { locale: Locale }) {
     </div>
   );
 }
+
+/** Compact language links for the footer, keeping the current page. */
+export function FooterLanguages({ locale, label }: { locale: Locale; label: string }) {
+  const pathname = usePathname() ?? "/";
+  const { path } = splitPath(pathname);
+  return (
+    <nav aria-label={label}>
+      <ul className="flex flex-wrap items-center gap-1">
+        {locales.map((l) => (
+          <li key={l}>
+            <a
+              href={localePath(l, path)}
+              hrefLang={localeInfo[l].lang}
+              lang={localeInfo[l].lang}
+              aria-current={l === locale ? "true" : undefined}
+              onClick={() => rememberChoice(l)}
+              className={`inline-flex min-h-10 items-center rounded-md px-3 text-sm ${
+                l === locale ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:text-white"
+              }`}
+            >
+              {localeInfo[l].name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
