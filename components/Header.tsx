@@ -24,7 +24,7 @@ export function Brand({ locale, tone }: { locale: Locale; tone: "dark" | "light"
   return (
     <Link href={localePath(locale, "/")} className="flex items-center gap-2.5" aria-label="Ephmet Red Sea FZCO">
       <span className={`grid size-10 place-items-center rounded-lg bg-white ${tone === "light" ? "border border-line" : ""}`}>
-        <img src="/img/logo-mark.png" alt="" width={32} height={32} className="size-8" />
+        <img src="/img/logo-mark.webp" alt="" width={32} height={32} className="size-8" />
       </span>
       <span
         dir="ltr"
