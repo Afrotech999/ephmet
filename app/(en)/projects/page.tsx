@@ -6,16 +6,16 @@ import { absolute } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Moved to Logistics | Ephmet",
   robots: { index: false, follow: true },
-  alternates: { canonical: absolute("/logistics") },
+  alternates: { canonical: absolute("/logistics/") },
 };
 
 export default function ProjectsMoved() {
   return (
     <div className="wrap py-16">
-      <meta httpEquiv="refresh" content="0; url=/logistics" />
+      <meta httpEquiv="refresh" content="0; url=/logistics/" />
       <p className="text-lg">
         This page has moved to{" "}
-        <Link href="/logistics" className="font-semibold text-blue underline">
+        <Link href="/logistics/" className="font-semibold text-blue underline">
           Logistics
         </Link>
         .

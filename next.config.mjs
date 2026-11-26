@@ -2,6 +2,7 @@
 const nextConfig = {
   // Plain HTML files in /out: works on Vercel and on any static host.
   output: "export",
+  trailingSlash: true,
   images: { unoptimized: true },
   experimental: {
     // One 404 page across the English and the /zh, /fr, /ar root layouts.

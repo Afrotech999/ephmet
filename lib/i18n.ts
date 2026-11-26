@@ -22,8 +22,8 @@ export function isLocale(value: string): value is Locale {
 /** Build a site path for a locale. `path` is the English path, e.g. "/products". */
 export function localePath(locale: Locale, path = "/"): string {
   const clean = path === "/" ? "" : path.replace(/\/$/, "");
-  if (locale === defaultLocale) return clean || "/";
-  return `/${locale}${clean}`;
+  if (locale === defaultLocale) return `${clean}/`;
+  return `/${locale}${clean}/`;
 }
 
 /** Split a pathname into its locale and the locale-free path. */

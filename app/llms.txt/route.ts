@@ -28,17 +28,17 @@ export function GET() {
   for (const line of lineOrder) {
     lines.push(`## ${t.lines[line].name}`, "");
     for (const p of productsByLine(line)) {
-      lines.push(`- [${p.name.en}](${absolute(`/products/${p.slug}`)}): ${p.text.en} Typical: ${p.key}.`);
+      lines.push(`- [${p.name.en}](${absolute(localePath("en", `/products/${p.slug}`))}): ${p.text.en} Typical: ${p.key}.`);
     }
     lines.push("");
   }
   lines.push(
     "## Pages",
     "",
-    `- [Products](${absolute("/products")}): all 21 products by line`,
-    `- [Logistics](${absolute("/logistics")}): ${t.meta.logisticsDesc}`,
-    `- [About](${absolute("/about")}): ${t.meta.aboutDesc}`,
-    `- [Request a quote](${absolute("/contact")}): ${t.meta.contactDesc}`,
+    `- [Products](${absolute(localePath("en", "/products"))}): all 21 products by line`,
+    `- [Logistics](${absolute(localePath("en", "/logistics"))}): ${t.meta.logisticsDesc}`,
+    `- [About](${absolute(localePath("en", "/about"))}): ${t.meta.aboutDesc}`,
+    `- [Request a quote](${absolute(localePath("en", "/contact"))}): ${t.meta.contactDesc}`,
     "",
   );
   return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8" } });
